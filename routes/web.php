@@ -36,7 +36,7 @@ Route::get('/',[App\Http\Controllers\LeavesController::class,'index'])
 Route::resource('departments',DepartmentsController::class)->middleware(['auth']);
 Route::resource('leavestype',LeavesTypeController::class)->middleware(['auth']);
 Route::resource('employees',EmployeesController::class)->middleware(['auth']);
-Route::resource('leaves',LeavesController::class);
+Route::resource('leaves',LeavesController::class)->middleware(['auth']);
 
 Route::get('/login',[LoginController::class,'create'])
 ->middleware(['guest'])
