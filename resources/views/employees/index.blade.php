@@ -25,17 +25,14 @@
         </thead>
         <tbody class="text-center">
             <tr>
-                @if($employees)
                 @foreach($employees as $employee)
                 <th scope="row">{{$employee->name}}</th>
                 <td>{{$employee->email}}</td>
                 <td>{{$employee->address}}</td>
                 <td>{{$employee->role}}</td>
                 <td><a href="{{route('employees.edit', $employee->id)}}" class="btn btn-primary">Edit</a></td>
-
             </tr>
             @endforeach
-            @endif
         </tbody>
     </table>
     @endsection

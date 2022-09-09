@@ -17,7 +17,7 @@
     <table class="table table-striped mt-5 py-5">
         <thead class="text-center">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Employee Name</th>
                 <th scope="col">From Date</th>
                 <th scope="col">To Date</th>
                 <th scope="col">Description</th>
@@ -27,9 +27,8 @@
         </thead>
         <tbody class="text-center">
             <tr>
-                @if($leaves)
                 @foreach($leaves as $leave)
-                <th scope="row">{{$leave->id}}</th>
+                <td>{{$leave->name}}</td>
                 <td>{{$leave->start_date}}</td>
                 <td>{{$leave->end_date}}</td>
                 <td>{{$leave->description}}</td>
@@ -56,7 +55,6 @@
                 </td>
             </tr>
             @endforeach
-            @endif
         </tbody>
     </table>
     <script>

@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="row-4 mt-4">
-    <div class="col-md-6 p-4 shadow-sm offset-3 bg-dark rounded ">
+    <div class="col-md-6 py-4 ms-5 ps-5 ">
         @if($errors->any())
         <div class="alert alert-danger">
             Validation error!
