@@ -6,6 +6,8 @@ use App\Http\Controllers\LeavesTypeController;
 use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\LeavesController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProfilesController;
+
 
 
 
@@ -47,4 +49,15 @@ Route::post('/login',[LoginController::class,'store'])
 Route::delete('/logout',[LoginController::class,'destroy'])
 ->middleware(['auth'])
 ->name('logout');
+
+Route::get('/profile',[ProfilesController::class,'change'])
+->middleware(['auth'])
+->name('change_password');
+
+Route::post('/profile',[ProfilesController::class,'update'])
+->middleware(['auth'])
+->name('update_password');
+
+
+
 

@@ -22,11 +22,11 @@
                     <h3 class="mb-0 ">{{$department->title}}</h3>
                 </div>
                 <div class="col-md-6 p-4 ms-5 d-flex flex-column position-static">
-                    <a href="{{route('departments.edit', $department->id)}}" class="btn btn-primary w-75">Edit Department</a>
+                    <a href="{{route('departments.edit', $department->id)}}" class="btn btn-primary w-100">Edit Department</a>
                     <form action="{{route('departments.destroy',$department->id)}}" method="post">
                         @csrf
                         @method('delete')
-                        <button type='submit' class="btn btn-danger mt-5 w-75">Delete Department</button>
+                        <button type='submit' class="btn btn-danger mt-5 w-100">Delete Department</button>
                     </form>
                 </div>
 
