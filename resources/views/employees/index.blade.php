@@ -30,7 +30,20 @@
                 <td>{{$employee->email}}</td>
                 <td>{{$employee->address}}</td>
                 <td>{{$employee->role}}</td>
-                <td><a href="{{route('employees.edit', $employee->id)}}" class="btn btn-primary">Edit</a></td>
+                <td>
+                    <div class="row">
+                        <div class="col-md-6 ">
+                        <a href="{{route('employees.edit', $employee->id)}}" class="btn btn-primary w-50">Edit</a>
+                        </div>
+                        <div class="col-md-5">
+                            <form action="{{route('employees.destroy',$employee->id)}}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type='submit' class="btn btn-danger">Delete </button>
+                            </form>
+                        </div>
+                    </div>
+                </td>
             </tr>
             @endforeach
         </tbody>

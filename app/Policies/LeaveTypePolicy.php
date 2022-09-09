@@ -18,7 +18,12 @@ class LeaveTypePolicy
      */
     public function viewAny(Employee $employee)
     {
-        return true;
+        if( $employee->role=="admin"){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -30,7 +35,12 @@ class LeaveTypePolicy
      */
     public function view(Employee $employee, LeaveType $leaveType)
     {
-        return true;
+        if( $employee->role=="admin"){
+            return true;
+        }
+        else{
+            return false;
+        };
     }
 
     /**

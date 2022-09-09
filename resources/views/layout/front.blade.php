@@ -80,7 +80,7 @@
                                 Employees
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mb-3">
                             <a class="nav-link text-black" href="{{route('leaves.index')}}">
                                 <span class="me-2" data-feather="list"></span>
                                 Leaves

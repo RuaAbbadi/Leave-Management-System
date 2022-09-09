@@ -18,7 +18,12 @@ class DepartmentPolicy
      */
     public function viewAny(Employee $employee)
     {
-        return true;
+        if( $employee->role=="admin"){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -30,7 +35,12 @@ class DepartmentPolicy
      */
     public function view(Employee $employee, Department $department)
     {
-        return true;
+        if( $employee->role=="admin"){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**

@@ -111,7 +111,7 @@ class EmployeesController extends Controller
         $this->authorize('update',$employees);
         $employees->name=$request->post('name');
         $employees->email=$request->post('email');
-        $employees->password=$request->post('password');
+        $employees->password=Hash::make($request->post('password'));
         $employees->gender=$request->post('gender');
         $employees->department_id=$request->post('department');
         $employees->phonenumber=$request->post('phonenumber');
